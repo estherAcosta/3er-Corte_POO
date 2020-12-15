@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+Eliminar 
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('Eliminar') }}" method="POST">
+        <h1>Eliminar </h1>
+        <label for="Id">ID A Eliminar :</label>
+        <input type="text" id="Id" name="Id">
+        <button type="submit">Eliminar</button>
+        <button><a href="{{ url_for('usuarios') }}" >Regresar</a></button>
+</form>
+{% endblock %}

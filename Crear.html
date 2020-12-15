@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+    Agregar Usuarios
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('Crear_Usuarios') }}" method="POST">
+        <h1>Agregar Usuarios</h1>
+        <label for="Nombres">Nombre</label>
+        <input type="text" id="Nombres" name="Nombres">
+        <label for="Apellidos">Apellidos</label>
+        <input type="text" id="Apellidos" name="Apellidos">
+        <label for="Email">E-mail</label>
+        <input type="email" id="Email" name="Email">
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" id="Contraseña" name="Contraseña">
+        <button type="submit">Guardar</button>
+        <button ><a href="{{ url_for('usuarios') }}" >Regresar</a></button>
+</form>
+
+{% endblock %}

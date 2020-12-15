@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+Listar
+{% endblock %}
+
+{% block content %}
+<h1>Usuarios</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Contraseña</th>
+
+        </tr>
+    </thead>
+    <tbody>{% for lista in Usuarios %}
+        <tr>
+            <td>{{ lista[0] }}</td>
+            <td>{{ lista[1] }}</td>
+            <td>{{ lista[2] }}</td>
+            <td>{{ lista[3] }}</td>
+            <td>{{ lista[4] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    <button ><a href="{{ url_for('Crear_Usuarios') }}" >Agregar</a></button>
+    <button ><a href="{{ url_for('Editar') }}" >Editar</a></button>
+    <button ><a href="{{ url_for('Eliminar') }}" >Eliminar</a></button>
+{% endblock %}
